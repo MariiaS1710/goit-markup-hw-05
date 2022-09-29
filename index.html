@@ -50,10 +50,18 @@
     <section class="hero overlay">
       <div class="container">
         <h1 class="hero-title">ефективні рішення для вашого бізнесу</h1>
-        <button type="button" class="hero-button">Замовити послугу</button>
+        <button type="button" class="hero-button" data-modal-open>Замовити послугу</button>
       </div>
-      
     </section>
+
+    <!-- Модальне вікно 
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button type="button" class="close" data-modal-close>
+    </button>
+  </div>
+</div> -->
+
     <!--Особливості секція-->
     <section class="features-section">
       <div class="container">
@@ -355,6 +363,14 @@
       </div>
     </div>
   </footer>
+  <!-- Модальне вікно  -->
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button type="button" class="close" data-modal-close>
+      </button>
+    </div>
+  </div>
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>
