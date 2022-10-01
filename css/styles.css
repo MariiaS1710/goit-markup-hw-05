@@ -77,7 +77,6 @@ ul{
 .link:hover,
 .link:focus {
     color: var(--accent-color);
-    transition:var(--transition-hover-focus)
 }
 .link{
     font-family: Roboto, sans-serif;
@@ -86,7 +85,9 @@ ul{
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
+    transition: var(--transition-hover-focus)
 }
+
 .site-nav .link.current{
     color: var(--accent-color);
     position: relative;
@@ -115,20 +116,20 @@ ul{
 .envelope{
     margin-right: 10px;
     fill: #757575;
+    transition: var(--transition-hover-focus);
 }
 .smartphone{
     fill: #757575;
     margin-right: 10px;
+    transition: var(--transition-hover-focus);
 }
 .mail-footer:hover .envelope,
 .mail-footer:focus .envelope{
     fill: var(--accent-color);
-    transition: var(--transition-hover-focus);
 }
 .phone-footer:hover .smartphone,
 .phone-footer:focus .smartphone{
     fill: var(--accent-color);
-    transition: var(--transition-hover-focus);
 }
 
 .mail-footer{
@@ -248,6 +249,7 @@ ul{
 /* Чим ми займаємось секція */
 .what-we-do-section{
     padding-bottom: 94px;
+    z-index: 0;
 }
 .main-title{
     font-weight: 700;
@@ -263,7 +265,7 @@ ul{
 .what-we-do-items{
     width: calc((100%-60px)/3);
     position: relative;
-    z-index: 1;
+    
 }
 .what-we-do-items:not(:first-child){
     margin-left: 30px;
@@ -279,7 +281,7 @@ img{
     width: 370px;
     height: 70px;
     background-color: rgba(47, 48, 58, 0.8);
-    z-index: 2;
+    z-index: 0;
 }
 .what-we-do-text{
     font-family: 'Roboto';
@@ -348,20 +350,20 @@ img{
     width: 44px;
     height: 44px;
     border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-item-link:hover .social-icon,
 .social-item-link:focus .social-icon {
     fill: var(--primary-white-color);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-item-link:hover,
 .social-item-link:focus{
 background-color: var(--accent-color);
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon{
     fill:#AFB1B8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Постійні клієнти секція */
 .clients-section{
@@ -383,6 +385,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 41px;
     height: 47px;
     fill: #afb1b8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
    }
    .link-clients:hover .company-ya-co,
    .link-clients:focus .company-ya-co,
@@ -397,38 +400,41 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
    .link-clients:hover .company-comp3,
    .link-clients:focus .company-comp3{
         fill: var(--accent-color);
-        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     .link-clients:hover,
     .link-clients:focus{
         border: 1px solid var(--accent-color);
-        transition:border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
    .company-comp{
     width: 40px;
     height: 52px;
     fill: #afb1b8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
    }
    .company-company2{
     width: 44px;
     height: 41px;
     fill: #afb1b8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
    }
    .company-peters{
     width: 85px;
     height: 40px;
     fill: #afb1b8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
    }
    .company-brand{
     width: 62px;
     height: 45px;
     fill: #afb1b8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
    }
    .company-comp3{
     width: 93px;
     height: 43px;
     fill: #afb1b8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
    }
 .link-clients{
     display: flex;
@@ -438,6 +444,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     justify-content: center;
     align-items: center;
     border: 1px solid #AFB1B8;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -504,12 +511,13 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 100%;
     height: 100%;
     align-items: center;
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-social:hover,
 .link-social:focus{
     background-color: var(--accent-color);
     border-radius: 50%;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
 .social-item:not(:first-child){
     margin-left: 10px;
@@ -523,6 +531,13 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 /* Portfolio */
 /* header */
+.header.portf{
+    position: absolute;
+    left:50%;
+    transform: translate(-50%);
+    border-bottom:1px solid #ECECEC;
+    width: 1600px;
+}
 .link.current-port{
     color: var(--accent-color);
     position: relative;
@@ -564,6 +579,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding: 6px 22px;
     border: solid var(--bcg-button-portfolio);
     border-radius: 4px;
+    transition: background-color, color, border-radius, border, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-portfolio:hover,
 .button-portfolio:focus{
@@ -572,7 +588,6 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 4px;
     border: solid var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    transition: background-color, color, border-radius,border,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project-list{
     display: flex;
@@ -586,11 +601,11 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .link-project-list{
     display: block;
     text-decoration: none;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-project-list:hover,
 .link-project-list:focus{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project-list-item{
     margin-top: 30px;
@@ -615,7 +630,6 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .link-project-list:hover .project-list-thumb::before
  {
     opacity: 1;
-    /* transition: opacity,height 250ms cubic-bezier(0.4, 0, 0.2, 1); */
     animation-direction: reverse;
     transform: scaley(1);
 
@@ -634,11 +648,10 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
     width: 322px;
     height: 168px;
-
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-project-list:hover .project-list-text {
     opacity: 1;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .wrap{
@@ -649,10 +662,12 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     max-width: 370px;
 }
 .project-title{
+    font-family: 'Roboto';
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+    color: var(--primary-text-color);
 }
 .project-text{
     font-size: 16px;
@@ -668,6 +683,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -685,7 +701,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: var(--primary-white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    z-index: 2;
+    z-index: 3;
 }
 
 .close {
